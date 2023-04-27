@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/index.tsx"],
+  "sourcesContent": ["import { Link } from \"@remix-run/react\";\nimport { json, redirect } from \"@remix-run/node\";\nimport type { ActionArgs, LoaderArgs } from \"@remix-run/node\";\nimport { getUserId } from \"~/session.server\";\n\nexport async function loader({ request }: LoaderArgs) {\n  const userId = await getUserId(request);\n  if (userId) return redirect(\"/dashboard\");\n  return json({});\n}\n\nexport default function Index() {\n  return (\n    <>\n      <div className=\"flex justify-center items-center h-screen bg-indigo-600\">\n        <div className=\"w-96 p-6 shadow-purple-950 shadow-2xl bg-white rounded-md \">\n          <Link to=\"/login\"> login</Link>\n          <Link to=\"/register\"> register</Link>\n          <Link to=\"/dashboard\"> dashboard</Link>\n        </div>\n      </div>\n    </>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;;AAGA,qBAA0B;AAUtB;AAFW,SAAR,QAAyB;AAC9B,SACE,sFACE,6DAAC,SAAI,WAAU,2DACb,6DAAC,SAAI,WAAU,8DACb;AAAA,uDAAC,QAAK,IAAG,UAAS,sBAAlB;AAAA;AAAA;AAAA;AAAA,WAAwB;AAAA,IACxB,mDAAC,QAAK,IAAG,aAAY,yBAArB;AAAA;AAAA;AAAA;AAAA,WAA8B;AAAA,IAC9B,mDAAC,QAAK,IAAG,cAAa,0BAAtB;AAAA;AAAA;AAAA;AAAA,WAAgC;AAAA,OAHlC;AAAA;AAAA;AAAA;AAAA,SAIA,KALF;AAAA;AAAA;AAAA;AAAA,SAMA,KAPF;AAAA;AAAA;AAAA;AAAA,SAQA;AAEJ;",
+  "names": []
+}

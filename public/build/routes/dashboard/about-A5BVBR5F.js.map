@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/dashboard/about.tsx"],
+  "sourcesContent": ["import { Link } from \"@remix-run/react\";\r\nimport { Layout } from \"~/components/Layout\";\r\nimport type { LoaderArgs } from \"@remix-run/node\";\r\nimport { json, redirect } from \"@remix-run/node\";\r\n// import { getUser } from \"~/session.server\";\r\n\r\n// export async function loader({ request }: LoaderArgs) {\r\n//   const user = await getUser(request);\r\n//   if (!user) return redirect(\"/login\");\r\n//   return json({});\r\n// }\r\n\r\nconst about = () => {\r\n  return (\r\n    <>\r\n      <div className=\"p-3 w-full\">\r\n        <h1 className=\"text-blue-900 text-5xl\">this is About</h1>\r\n        <Link to=\"/login\">Login here</Link>\r\n      </div>\r\n    </>\r\n  );\r\n};\r\n\r\nexport default about;\r\n"],
+  "mappings": ";;;;;;;;;AAcI;AAFJ,IAAM,QAAQ,MAAM;AAClB,SACE,sFACE,6DAAC,SAAI,WAAU,cACb;AAAA,uDAAC,QAAG,WAAU,0BAAyB,6BAAvC;AAAA;AAAA;AAAA;AAAA,WAAoD;AAAA,IACpD,mDAAC,QAAK,IAAG,UAAS,0BAAlB;AAAA;AAAA;AAAA;AAAA,WAA4B;AAAA,OAF9B;AAAA;AAAA;AAAA;AAAA,SAGA,KAJF;AAAA;AAAA;AAAA;AAAA,SAKA;AAEJ;AAEA,IAAO,gBAAQ;",
+  "names": []
+}
